@@ -1,7 +1,5 @@
 package edu.hw3;
 
-import java.util.PriorityQueue;
-
 public class Task6 {
     public static void main(String[] args) {
         StockMarket stockMarket = new StockMarketImpl();
