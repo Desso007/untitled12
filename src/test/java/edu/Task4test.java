@@ -1,7 +1,8 @@
 package edu;
+import edu.hw3.Task4;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import edu.hw3.Task4;
+
 public class Task4test {
 
     @Test
