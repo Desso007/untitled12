@@ -3,15 +3,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 import java.util.Arrays;
+
 public class Task3 {
     public static Map<Object, Integer> freqDict(List<Object> lst) {
         Map<Object, Integer> freq = new HashMap<>();
         for (Object item : lst) {
-            if (freq.containsKey(item)) {
-                freq.put(item, freq.get(item) + 1);
-            } else {
-                freq.put(item, 1);
-            }
+            freq.merge(item, 1, Integer::sum);
         }
         return freq;
     }
