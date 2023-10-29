@@ -15,10 +15,15 @@ public class Task2 {
                 if (stack.size() == 1) {
                     startIndex = i;
                 }
-            } else if (input.charAt(i) == ')' && !stack.isEmpty()) {
-                stack.pop();
-                if (stack.isEmpty()) {
-                    clusters.add(input.substring(startIndex, i + 1));
+            } else if (input.charAt(i) == ')') {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                    if (stack.isEmpty()) {
+                        clusters.add(input.substring(startIndex, i + 1));
+                    }
+                } else {
+                  
+                    System.err.println("Ошибка: несбалансированные скобки");
                 }
             }
         }
@@ -34,7 +39,7 @@ public class Task2 {
 
         List<String> clusters1 = clusterize(input1);
         List<String> clusters2 = clusterize(input2);
-        List<String> clusters3 = clusterize(input3);
+        ListString clusters3 = clusterize(input3);
         List<String> clusters4 = clusterize(input4);
 
         System.out.println(clusters1);
